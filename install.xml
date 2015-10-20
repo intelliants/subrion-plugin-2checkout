@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin name="2checkout">
+	<title>2Checkout</title>
+	<summary>2Checkout payment gateway integration allows to accept funds using 2checkout payment processing company.</summary>
+	<author>Intelliants LLC</author>
+	<contributor>Intelliants LLC</contributor>
+	<version>3.4.0</version>
+	<date>2015-09-01</date>
+	<category>payments</category>
+	<compatibility>3.4</compatibility>
+
+	<config group="financial" name="2checkout" type="divider">2Checkout</config>
+	<config group="financial" name="2checkout_id" type="text" description="2Checkout ID"><![CDATA[ 123456 ]]></config>
+	<config group="financial" name="2checkout_secret" type="text" description="2Checkout secret word"><![CDATA[]]></config>
+	<config group="financial" name="2checkout_demo" type="radio" values="0,1" description="Demo mode">0</config>
+	<config group="financial" name="2checkout_currency" values="USD,AUD,BRL,GBP,CAD,DKK,EUR,HKD,INR,ILS,JPY,LTL,MYR,MXN,NZD,NOK,PHP,RON,RUB,SGD,ZAR,SEK,CHF,TRY,ARS,AED" type="select" description="2checkout сurrency">USD</config>
+
+	<hooks>
+		<hook name="paymentButtons" type="smarty" filename="plugins/2checkout/templates/button.tpl"><![CDATA[]]></hook>
+	</hooks>
+
+	<phrases>
+		<phrase category="common" key="2checkout_payment_completed">Payment has been completed successfully.</phrase>
+		<phrase category="common" key="2checkout_payment_failed">Payment failed. Please contact the website administrator.</phrase>
+		<phrase category="common" key="transaction_exists">Transaction already exists in our records.</phrase>
+	</phrases>
+
+	<tooltips>
+		<tooltip key="2checkout_secret">To set up the secret word please log in to your 2CO account, click on the “Account” tab, then click on “Site Management” subcategory. On the “Site Management” page you will enter the Secret Word in the field provided under Direct Return. After you have entered your Secret Word click the blue “Save Changes” button at the bottom of the page.
+			The secret word is used by those wishing to check the MD5 hash passback, with a routine on their site. It is also needed by those using a program like the membership or download client. The secret word is also used to calculate the MD5 hash which is sent to verify the authenticity of INS posts.
+			The secret word should be a single or compound word or group of letters and numbers with no spaces. Examples: Monkey1mouse, 4smal3phone, gooblyWbubze.</tooltip>
+	</tooltips>
+</plugin>
