@@ -4,10 +4,10 @@
 	<summary>2Checkout payment gateway integration allows to accept funds using 2checkout payment processing company.</summary>
 	<author>Intelliants LLC</author>
 	<contributor>Intelliants LLC</contributor>
-	<version>3.4.0</version>
-	<date>2015-09-01</date>
+	<version>4.0.0</version>
+	<date>2015-11-25</date>
 	<category>payments</category>
-	<compatibility>3.4</compatibility>
+	<compatibility>4.0</compatibility>
 
 	<config group="financial" name="2checkout" type="divider">2Checkout</config>
 	<config group="financial" name="2checkout_id" type="text" description="2Checkout ID"><![CDATA[ 123456 ]]></config>
