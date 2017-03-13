@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<plugin name="2checkout">
+<module type="plugin" name="2checkout">
 	<title>2Checkout</title>
 	<summary>2Checkout payment gateway integration allows to accept funds using 2checkout payment processing company.</summary>
 	<author>Intelliants LLC</author>
 	<contributor>Intelliants LLC</contributor>
-	<version>4.0.1</version>
-	<date>2016-04-29</date>
+	<version>4.1.0</version>
+	<date>2017-03-13</date>
 	<category>payments</category>
-	<compatibility>4.0</compatibility>
+	<compatibility>4.1</compatibility>
 
 	<config group="financial" name="2checkout" type="divider">2Checkout</config>
 	<config group="financial" name="2checkout_id" type="text" description="2Checkout ID"><![CDATA[ 123456 ]]></config>
@@ -16,7 +16,7 @@
 	<config group="financial" name="2checkout_currency" values="USD,AUD,BRL,GBP,CAD,DKK,EUR,HKD,INR,ILS,JPY,LTL,MYR,MXN,NZD,NOK,PHP,RON,RUB,SGD,ZAR,SEK,CHF,TRY,ARS,AED" type="select" description="2checkout сurrency">USD</config>
 
 	<hooks>
-		<hook name="paymentButtons" type="smarty" filename="plugins/2checkout/templates/button.tpl"><![CDATA[]]></hook>
+		<hook name="paymentButtons" type="smarty" filename="button" page_type="front"><![CDATA[]]></hook>
 	</hooks>
 
 	<phrases>
@@ -30,4 +30,4 @@
 			The secret word is used by those wishing to check the MD5 hash passback, with a routine on their site. It is also needed by those using a program like the membership or download client. The secret word is also used to calculate the MD5 hash which is sent to verify the authenticity of INS posts.
 			The secret word should be a single or compound word or group of letters and numbers with no spaces. Examples: Monkey1mouse, 4smal3phone, gooblyWbubze.</tooltip>
 	</tooltips>
-</plugin>
+</module>
